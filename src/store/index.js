@@ -3,7 +3,8 @@ import { configureStore } from 'redux-starter-kit';
 import rootReducer from '../reducers/rootReducer';
 
 const initialState = {
-  appointments: []
+  appointments: [],
+  hour: 0
 }
 
 const store = configureStore({
