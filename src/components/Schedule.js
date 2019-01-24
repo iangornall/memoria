@@ -1,4 +1,6 @@
 import React from 'react';
+import Tile from '../styled-components/Tile';
+import Text from '../styled-components/Text';
 import {set, unset} from '../reducers/hourReducer';
 
 let clickHandler = (dispatch, hour) => () => {
@@ -7,15 +9,18 @@ let clickHandler = (dispatch, hour) => () => {
 
 let Schedule = ({dispatch, hour, appointments}) => (
   <div>
+    <Tile nohover>
+      <Text as="h1" size="1.5rem" weight="bold">La Persistència de la Memòria</Text>
+    </Tile>
     <ul>
       {[9,10,11,12,1,2,3,4,5].map(hour => (
-        <li 
+        <Tile as="li" 
           onClick={clickHandler(dispatch, hour)} 
           key={hour}
           className={appointments[hour] && "red"}
         >
-          {hour}:00 {hour > 8 ? 'AM' : 'PM'}
-        </li>
+          {hour}:00 {hour > 8 && hour < 12 ? 'AM' : 'PM'}
+        </Tile>
       ))}
     </ul>
     <div>
