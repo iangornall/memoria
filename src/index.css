@@ -6,3 +6,6 @@ html, body {
 body * {
   box-sizing: inherit;
 }
+.red {
+  color: red;
+}

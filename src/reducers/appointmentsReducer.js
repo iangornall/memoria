@@ -6,10 +6,10 @@ export const remove = createAction('appointments/remove');
 
 const appointmentsReducer = createReducer([], {
   [add]: (state, action) => {
-    state.appointments[action.payload.hour] = action.payload.appointment;
+    state[action.payload.hour] = action.payload.appointment;
   },
   [remove]: (state, action) => {
-    state.appointments[action.payload.hour] = null;
+    state[action.payload.hour] = null;
   }
 })
 export default appointmentsReducer;

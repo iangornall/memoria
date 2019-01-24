@@ -4,7 +4,7 @@ import rootReducer from '../reducers/rootReducer';
 
 const initialState = {
   appointments: [],
-  hour: 0
+  hour: -1
 }
 
 const store = configureStore({
