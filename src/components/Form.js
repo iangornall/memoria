@@ -1,11 +1,8 @@
 import React from 'react';
+import FormDisplay from './FormDisplay';
 import { connect } from 'react-redux';
-import { add, remove } from '../reducers/appointmentsReducer';
+import { add } from '../reducers/appointmentsReducer';
 import { unset } from '../reducers/hourReducer';
-import Tile from '../styled-components/Tile';
-import Text from '../styled-components/Text';
-import InputBox from '../styled-components/InputBox';
-import Button from '../styled-components/Button';
 class Form extends React.Component {
   constructor(props){
     super(props);
@@ -54,40 +51,11 @@ class Form extends React.Component {
   }
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <Tile>
-            <Text marginBottom="0.5em">Name:</Text>
-            <InputBox 
-              type="text" 
-              placeholder="Full Name" 
-              name="name" 
-              value={this.state.name} 
-              onChange={this.handleChange} 
-            />
-          </Tile>
-        </label>        
-        <label>
-          <Tile>
-            <Text marginBottom="0.5em">Phone number:</Text>
-            <InputBox 
-              type="text" 
-              placeholder="xxx-xxx-xxxx" 
-              name="phone" 
-              value={this.state.phone} 
-              onChange={this.handleChange} 
-            />
-            {this.state.phoneFormatError &&
-              <Text marginTop="0.5rem" className="red">Please enter your ten digit phone number.</Text>
-            }
-          </Tile>
-        </label>
-        <label>
-          <Tile>
-            <Button type="submit">Submit</Button>
-          </Tile>
-        </label>
-      </form>
+      <FormDisplay 
+        {...this.state} 
+        handleChange={this.handleChange} 
+        handleSubmit={this.handleSubmit}
+      />
     )
   }
 }

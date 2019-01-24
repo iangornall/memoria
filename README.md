@@ -1,9 +1,15 @@
 Technologies used:
 React with Redux and Styled Components
 
+This application should exhibit best practices for application development where possible.
+
 I used create-react-app and redux-starter-kit to build basic scaffolding with best practices implemented.  I have used redux before without the starter kit, but I found the included tools made for more readable code.
 
 I used Styled Components to build out styles because it gives you modular, reusable code.  This enabled me to reuse styled components from a prior project.
+
+I broke apart the lifecycle and logic components from the display components for ease of testing.
+
+I used Jest to create smoke screen tests to be sure components rendered.  I had not previously performed testing with Jest, but found it helped identify bugs.  Due to the scope of the project, I tested functionality as a user, however I am interested in learning more and writing automated tests in the future.
 
 Application Requirements:
 
