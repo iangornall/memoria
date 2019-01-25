@@ -14,7 +14,7 @@ This application should exhibit best practices for application development where
 
  * I broke apart the lifecycle and logic components from the display components for ease of testing.
 
- * I used Jest to create smoke screen tests to be sure components rendered.  I had not previously performed testing with Jest, band I found it helped identify bugs.  Due to the scope of the project, I tested functionality as a user. However, I am interested in learning more and writing automated tests in the future on larger projects at Cox.
+ * I used Jest to create smoke screen tests to be sure components rendered.  I had not previously performed testing with Jest, and I found it helped identify bugs.  Due to the scope of the project, I tested functionality as a user. However, I am interested in learning more and writing automated tests in the future on larger projects at Cox.
 
 ## Application Requirements:
 
